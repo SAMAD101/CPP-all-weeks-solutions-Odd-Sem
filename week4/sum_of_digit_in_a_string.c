@@ -12,7 +12,7 @@ int main(){
         scanf("%c", &inp[i]);
     }
 
-    printf("The digits present in the string is \n");
+    printf("The digits present in the string is ");
     int z; char sum = 0;
     for(int i=0; i<=l; i++){
         if(inp[i]>=48 && inp[i]<= 57){
@@ -21,6 +21,6 @@ int main(){
             sum += z;
         }
     }
-    printf("The sum of digits is %d", sum);
+    printf("\nThe sum of digits is %d", sum);
     return 0;
 }
