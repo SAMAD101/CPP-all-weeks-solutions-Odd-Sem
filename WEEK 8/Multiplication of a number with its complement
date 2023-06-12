@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        int T,r=0,prod=0,i,n;
+        scanf("%d",&T);
+        for(i=1;i<=T;i++)
+        {
+                scanf("%d",&n);
+                r=-(n+1);
+                prod=n*r;
+                printf("%d\n",prod);
+        }
+        return 0;
+}
+  
