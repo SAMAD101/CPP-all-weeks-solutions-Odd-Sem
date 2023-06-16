@@ -1,39 +1,24 @@
-#include <stdio.h>
+include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
-int do_it(int n){
-    int nod=0; //NO. of digits
-    int temp=n;
-    while(temp>1){
-        nod++;
-        temp = (int)(temp/10);
+int main(){
+    int T,i;
+    scanf("%d",&T);
+    for(i=0;i<T;i++)
+    {
+    long int r=0,a[10],N,cnt=0,j=0;
+    scanf("%ld",&N);
+    while(N!=0)
+    {
+        r=N%10;
+        N=N/10;
+        a[j]=r;
+        j++;
     }
-    temp=n;
-    int digits[nod];
-    for(int i=0; i<nod; i++){
-        digits[i] = temp%10;
-        temp = (int)(temp/10);
+        printf("%ld \n",a[0]+a[j-1]);
+        j=0;
     }
-
-    int sum = digits[0] + digits[nod-1];
-    return sum;
-}
-
-int main() {
-    int t;
-    scanf("%d", &t);
-    int arr[t];
-    for(int i=0; i<t; i++){
-        scanf("%d", &arr[i]);
-    }
-
-    for(int i=0; i<t; i++){
-        printf("%d\n", do_it(arr[i]));
-    }
-
-
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
-    return 0;
+return 0;
 }
